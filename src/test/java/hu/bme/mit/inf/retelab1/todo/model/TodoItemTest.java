@@ -53,12 +53,13 @@ public class TodoItemTest {
     void givenDefaultCreatedTodoItem_whenIdIsSet_thenPersistsCorrectly() {
         // Given
         TodoItem item = new TodoItem();
+        long id = 1;
 
         // When
-        item.setId(4L);
+        item.setId(id);
 
         // Then
-        assertEquals(4, item.getId());
+        assertEquals(id, item.getId());
     }
  
 }

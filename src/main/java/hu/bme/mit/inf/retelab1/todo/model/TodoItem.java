@@ -24,14 +24,14 @@ public class TodoItem {
 	private Long id;
 	
 	@NotNull
-	@Size(min=2, max=30)
+	@Size(min = 2, max = 30)
 	private String taskname;
 	
 	@NotNull
 	private Date performdate;
 	
 	@NotNull
-	@Size(min=5, max=15)
+	@Size(min = 5, max = 15)
 	private String category;
 	
 	@NotNull
@@ -41,7 +41,7 @@ public class TodoItem {
 	@NotNull
 	private Boolean isdone;
 	
-	public TodoItem(String taskname, Date performdate, String category, Priority priority, Boolean isdone){
+	public TodoItem(final String taskname, final Date performdate, final String category, final Priority priority, final Boolean isdone) {
 		this.taskname = taskname;
 		this.performdate = performdate;
 		this.category = category;
@@ -49,18 +49,18 @@ public class TodoItem {
 		this.isdone = isdone;
 	}
 
-	public TodoItem(){
+	public TodoItem() {
 	}
 
-	public Long getId(){
+	public Long getId() {
 		return id;
 	}
 
-	public String getName(){
+	public String getName() {
 		return taskname;
 	}
 
-	public void setId(Long id) {
+	public void setId(final Long id) {
 		this.id = id;
 	}
 

@@ -18,30 +18,31 @@ import hu.bme.mit.inf.retelab1.todo.services.TodoService;
 @RequestMapping("/todo")
 public class TodoController {
 
-	@Autowired TodoService todoService;
+	@Autowired 
+	private TodoService todoService;
 	
 	@RequestMapping(method = RequestMethod.GET)
-	public List<TodoItem> todos(){	
+	public List<TodoItem> todos() {	
 		return todoService.getTodos();
 	}
 	
-	@RequestMapping(method = RequestMethod.GET, value="/{id}")
-	public TodoItem getTodoById(@PathVariable("id") Long id){
+	@RequestMapping(method = RequestMethod.GET, value = "/{id}")
+	public TodoItem getTodoById(@PathVariable("id") final Long id) {
         return todoService.getTodoById(id);
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
-	public void saveTodo(@RequestBody @Valid TodoItem todo){
+	public void saveTodo(@RequestBody @Valid final TodoItem todo) {
 		todoService.addTodo(todo);
 	}
 	
-	@RequestMapping(method = RequestMethod.DELETE, value="/{id}")
-	public void deleteTodo(@PathVariable("id") Long id){
+	@RequestMapping(method = RequestMethod.DELETE, value = "/{id}")
+	public void deleteTodo(@PathVariable("id") final Long id) {
         todoService.deleteTodo(id);
 	}
 	
-	@RequestMapping(method = RequestMethod.PUT, value="/{id}")
-	public void editTodo(@RequestBody @Valid TodoItem editedTodo, @PathVariable("id") Long id){
+	@RequestMapping(method = RequestMethod.PUT, value = "/{id}")
+	public void editTodo(@RequestBody @Valid final TodoItem editedTodo, @PathVariable("id") final Long id) {
 		todoService.updateTodo(id, editedTodo);
 	}
 	
