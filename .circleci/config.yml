@@ -21,7 +21,7 @@ jobs:
             - ~/.gradle
           key: gradle-dependencies-{{ checksum "build.gradle" }}
       - run: ./gradlew check
-      - run: ./gradlew sonarqube -Dsonar.projectKey=${SONAR_PROJECTKEY} -Dsonar.organization=${SONAR_ORGANIZATION} -Dsonar.host.url=${SONAR_HOST_URL} -Dsonar.login=${SONAR_LOGIN}
+      #- run: ./gradlew sonarqube -Dsonar.projectKey=${SONAR_PROJECTKEY} -Dsonar.organization=${SONAR_ORGANIZATION} -Dsonar.host.url=${SONAR_HOST_URL} -Dsonar.login=${SONAR_LOGIN}
   deploy:
     docker:
       - image: buildpack-deps:trusty
