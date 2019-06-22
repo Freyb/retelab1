@@ -1,10 +1,10 @@
-package hu.bme.mit.inf.retelab1.todo.todo;
+package hu.bme.mit.inf.retelab1.todo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DemoApplicationTests {
+class TodoApplicationTests {
 
 	@Test
 	void contextLoads() {
