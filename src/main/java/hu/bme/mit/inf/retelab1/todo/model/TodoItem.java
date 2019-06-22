@@ -46,7 +46,7 @@ public class TodoItem {
 		this.performdate = performdate;
 		this.category = category;
 		this.priority = priority;
-		this.isdone = false;
+		this.isdone = isdone;
 	}
 
 	public TodoItem(){
